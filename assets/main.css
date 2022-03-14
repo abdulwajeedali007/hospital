@@ -204,21 +204,7 @@ header .navbar-toggler:focus {
   letter-spacing: 0.02;
   position: relative;
 }
-.about .heading h1::before,
-.about .heading h1::after {
-  content: "";
-  position: absolute;
-  top: -1.5rem;
-  left: 0rem;
-  width: 2rem;
-  height: 1.2rem;
-  background: var(--primary-color);
-  border-radius: 0.5rem 0rem;
-  box-shadow: 0px 10px 15px -25px rgba(0, 0, 0, 1);
-}
-.about .heading h1::after {
-  left: 2.5rem;
-}
+
 .about .heading h1 span {
   color: var(--primary-color);
 }
@@ -270,21 +256,6 @@ header .navbar-toggler:focus {
   font-weight: 700;
   letter-spacing: 0.02;
   position: relative;
-}
-.services .heading h1::before,
-.services .heading h1::after {
-  content: "";
-  position: absolute;
-  top: -1.5rem;
-  left: 0rem;
-  width: 2rem;
-  height: 1.2rem;
-  background: var(--white-color);
-  border-radius: 0rem 0.5rem;
-  box-shadow: 0px 10px 15px -25px rgba(0, 0, 0, 1);
-}
-.services .heading h1::after {
-  left: 2.5rem;
 }
 
 .services .heading p {
