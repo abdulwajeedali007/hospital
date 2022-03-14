@@ -28,7 +28,21 @@ textarea {
   font-family: "Poppins", sans-serif;
   font-weight: var(--font-size-normal);
 }
+
+/* SCROLL */
+.remove_header header {
+  transform: translate3d(0, -100%, 0);
+  filter: drop-shadow(0 -10px 20px rgba(170, 170, 170));
+}
 /* Header */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background: var(--white-color);
+  transition: all 0.5s ease;
+}
 header .nav-item {
   margin: 0rem 0.2rem;
 }
@@ -43,10 +57,21 @@ header .nav-item .nav-link:hover {
 header .navbar-brand img {
   width: 40%;
 }
-
+header .navbar-toggler:focus {
+  box-shadow: none;
+}
+@media (max-width: 500px) {
+  header .navbar-brand {
+    width: 50%;
+  }
+  header .navbar-brand img {
+    width: 65%;
+  }
+}
 /* Slider */
 .slider {
   position: relative;
+  margin-top: 4rem;
 }
 .slider .stripe_container {
   position: absolute;
@@ -89,6 +114,11 @@ header .navbar-brand img {
   }
   .slider .stripe_container .stripe {
     padding: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .slider {
+    margin-top: 5rem;
   }
 }
 .slider .btns a {

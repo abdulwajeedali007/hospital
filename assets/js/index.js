@@ -34,6 +34,34 @@ $(document).ready(() => {
   });
 });
 
+// navbar
+let lastPositionvalue = 0;
+let body = document.body;
+
+window.addEventListener("scroll", () => {
+  let currentPositionvalue = window.pageYOffset;
+
+  if (currentPositionvalue <= 0) {
+    body.classList.remove("remove_header");
+  }
+
+  if (
+    currentPositionvalue > lastPositionvalue &&
+    !body.classList.contains("remove_header")
+  ) {
+    body.classList.add("remove_header");
+    body.classList.remove("show_header");
+  }
+  if (
+    currentPositionvalue < lastPositionvalue &&
+    body.classList.contains("remove_header")
+  ) {
+    body.classList.remove("remove_header");
+    body.classList.add("show_header");
+  }
+  lastPositionvalue = currentPositionvalue;
+});
+
 // gototop
 
 let gototop = document.querySelector(".gototop");
