@@ -78,6 +78,7 @@ header .navbar-toggler:focus {
   bottom: -5rem;
   left: 0;
   width: 100%;
+  z-index: 5;
 }
 .slider .stripe_container .stripe {
   background-color: var(--primary-color);
@@ -95,20 +96,20 @@ header .navbar-toggler:focus {
   font-weight: 700;
 }
 .slider .carousel-caption {
-  bottom: 30%;
-  right: auto;
-  transform: translateY(-50%);
+  bottom: 50%;
+  right: 15%;
+  transform: translateY(50%);
   text-align: left;
 }
 @media (max-width: 1100px) {
-  .slider .carousel-caption {
+  /* .slider .carousel-caption {
     bottom: 15%;
-  }
+  } */
 }
 @media (max-width: 900px) {
-  .slider .carousel-caption {
+  /* .slider .carousel-caption {
     bottom: 5%;
-  }
+  } */
   .slider .stripe_container .stripe .content {
     flex-direction: column;
   }
@@ -182,20 +183,17 @@ header .navbar-toggler:focus {
   z-index: 1;
   margin-top: 6rem;
 }
-/* .about::before {
-  content: "";
+.about .placed_image {
   position: absolute;
-  right: 1rem;
-  top: 1rem;
-  background: url("../assets/images/heart.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 35rem;
-  height: 20rem;
+  top: 0rem;
+  right: 0.5rem;
   z-index: -1;
-  opacity: 0.6;
-} */
+  transform: rotate(270deg);
+  opacity: 0.9;
+}
+.about .placed_image img {
+  width: 100%;
+}
 .about .heading {
   padding: 2rem 0rem;
 }
@@ -221,6 +219,11 @@ header .navbar-toggler:focus {
 @media (max-width: 767px) {
   .about .row .col-md-4 {
     margin-bottom: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .about .placed_image {
+    display: none;
   }
 }
 .about .icon_box {
@@ -309,6 +312,17 @@ header .navbar-toggler:focus {
 }
 .filter_gallery {
   padding: 6rem 0rem;
+  position: relative;
+}
+.filter_gallery .placed_image_gallery {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: -1;
+  opacity: 0.9;
+}
+.filter_gallery .placed_image_gallery img {
+  width: 100%;
 }
 .filter_gallery .heading h1 {
   font-weight: 700;
