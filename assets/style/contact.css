@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+:root {
+  --primary-color: #2c5dbe;
+  --deeppink-color: #ff1493;
+  --secondary-color: #333333;
+  --white-color: #ffffff;
+  --font-size-normal: 1.2rem;
+  --font-size-larget: 1.8rem;
+  --font-size-extralarge: 2.8rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+
+p,
+a,
+ul > li,
+ul > li > a,
+input,
+textarea,
+label {
+  font-family: "Poppins", sans-serif;
+  font-weight: var(--font-size-normal);
+}
+
+/* ABOUT US */
+.sub_header {
+  padding: 10rem 0rem;
+  background: var(--primary-color);
+  color: var(--white-color);
+  position: relative;
+  z-index: 1;
+}
+.sub_header .title p {
+  font-size: var(--font-size-normal);
+  font-weight: 300;
+}
+
+.sub_header .title h2 {
+  font-size: var(--font-size-extralarge);
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+}
+.sub_header .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub_header .content .desc {
+  width: 45rem;
+  margin: 0;
+  font-size: var(--font-size-normal);
+}
+@media (max-width: 767px) {
+  .sub_header .content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sub_header .content .desc {
+    width: 100%;
+  }
+}
+.sub_header .place_image {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  transform: rotate(90deg);
+  z-index: -1;
+}
+.contact h2 {
+  font-size: var(--font-size-extralarge);
+  font-weight: 700;
+  margin: 2rem 0rem;
+}
+.contact .contact_details tr td span {
+  color: var(--primary-color);
+}
+.contact .contact_details tr td > p {
+  padding: 1rem;
+  font-size: var(--font-size-normal);
+}
+.contact .contact_details tr td > h3 {
+  font-weight: 700;
+  margin: 0rem 1rem;
+}
+.contact .contact_form {
+  padding: 1rem;
+}
+.contact .contact_form label {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.contact .contact_form input,
+.contact .contact_form textarea {
+  border: none;
+  border-bottom: 0.2rem solid var(--primary-color);
+  border-radius: 0rem;
+  padding: 0.8rem 1rem;
+}
+.contact .contact_form input:focus,
+.contact .contact_form textarea:focus {
+  box-shadow: none;
+}
+::placeholder {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--secondary-color);
+}
+
+.btn_submit {
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 0.8rem 2.5rem;
+  display: inline-block;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: 0rem 1rem 1rem -1.2rem rgba(0, 0, 0, 1);
+  transition: all 0.5s ease;
+  font-size: var(--font-size-normal);
+}
+.btn_submit:hover {
+  transform: translateY(5px);
+}
