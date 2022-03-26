@@ -108,3 +108,24 @@ let gototop = document.querySelector(".gototop");
 gototop.addEventListener("click", () => {
   window.scrollTo(0, 0);
 });
+
+(function () {
+  const valuesContainer = document.querySelector(".points");
+  const values = valuesContainer.querySelectorAll(".value");
+
+  values.forEach(function (value) {
+    const updateValue = function () {
+      const valueMax = +value.getAttribute("data-max");
+      const innerValue = +value.innerText;
+      const inc = valueMax / 2000;
+
+      if (innerValue < valueMax) {
+        value.innerText = Math.ceil(innerValue + inc);
+        setTimeout(updateValue, 5);
+      } else {
+        innerValue.innerText = valueMax;
+      }
+    };
+    updateValue();
+  });
+})();

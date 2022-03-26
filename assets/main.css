@@ -150,13 +150,15 @@ header .navbar-toggler:focus {
 .landing .points .icons_points p {
   font-size: var(--font-size-larget);
   font-weight: 700;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.landing .points .icons_points p span.value {
+  display: block;
+  margin-right: 1rem;
+  width: auto;
+  flex-grow: 1;
 }
 .landing .points .icons_points p span {
   display: inline-block;
-  margin-right: 1rem;
 }
 /* aboutus */
 .aboutus {
