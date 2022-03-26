@@ -16,10 +16,11 @@ $(document).ready(() => {
   });
 
   // OWL Carousel
-  $(".owl-carousel").owlCarousel({
+  $(".owl-carousel.items").owlCarousel({
     loop: true,
     margin: 10,
     nav: false,
+    autoplay: true,
     responsive: {
       0: {
         items: 1,
@@ -29,6 +30,45 @@ $(document).ready(() => {
       },
       1000: {
         items: 2,
+      },
+    },
+  });
+
+  // Sevices
+  $(".owl-carousel.owl-services").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    autoplay: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 4,
+      },
+    },
+  });
+
+  // PARTNERS
+  // Sevices
+  $(".owl-carousel.owl-partners").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    autoplay: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 4,
       },
     },
   });
